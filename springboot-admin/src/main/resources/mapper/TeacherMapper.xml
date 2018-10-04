@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springboot.vue.mapper.TeacherMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.springboot.vue.entity.Teacher">
+		<id column="te_id" property="teId" />
+		<result column="te_name" property="teName" />
+		<result column="te_sex" property="teSex" />
+		<result column="te_salary" property="teSalary" />
+	</resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        te_id AS teId, te_name AS teName, te_sex AS teSex, te_salary AS teSalary
+    </sql>
+
+</mapper>
