@@ -1,23 +1,24 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-  </div>
+  <el-container class="is-vertical">
+    <comment-header/>
+    <home-index/>
+    <comment-footer/>
+  </el-container>
 </template>
 
 <script>
+import CommentHeader from './components/Header/header.vue'
+import CommentFooter from './components/Footer/footer.vue'
+import HomeIndex from './pages/Home/index.vue'
 export default {
-  name: 'App'
+
+  components: {
+    CommentHeader,
+    CommentFooter,
+    HomeIndex
+  }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="stylus" rel="stylesheet/stylus">
 </style>
